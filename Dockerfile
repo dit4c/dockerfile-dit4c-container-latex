@@ -1,9 +1,7 @@
-# Dockerfile for Gephi graph image manipulation software
 FROM dit4c/dit4c-container-x11
-MAINTAINER Tim Dettrick <t.dettrick@uq.edu.au> and Lachlan \
-    Musicman <datakid@gmail.com>
+MAINTAINER Tim Dettrick <t.dettrick@uq.edu.au>
 
-RUN fsudo yum install -y \
+RUN yum install -y \
     texlive-collection-latex \
     texlive-collection-latexrecommended \
     texlive-latex \
@@ -14,14 +12,14 @@ RUN fsudo yum install -y \
     texlive-latex-fonts-doc \
     texlive-latexconfig \
     texlive-lualatex-math \
-    texlive-lualatex-math-doc \ 
+    texlive-lualatex-math-doc \
     texlive-pslatex \
-    texlive-thailatex \ 
-    texlive-thailatex-doc 
+    texlive-thailatex \
+    texlive-thailatex-doc
 
-RUN fsudo yum localinstall -y \
-    "http://download.opensuse.org/repositories/home:/jsundermeyer/CentOS_CentOS-7/x86_64/texstudio-2.10.4-13.1.x86_64.rpm" 
-    
+RUN yum localinstall -y \
+    "http://download.opensuse.org/repositories/home:/jsundermeyer/CentOS_CentOS-7/x86_64/texstudio-2.10.4-13.1.x86_64.rpm"
+
 RUN cd /tmp/ && \
     curl -L -s -o texstudio.desktop "http://sourceforge.net/p/texstudio/hg/ci/default/tree/utilities/texstudio.desktop?format=raw" && \
     mv texstudio.desktop /usr/share/applications && \
