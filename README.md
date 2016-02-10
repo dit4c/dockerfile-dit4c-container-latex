@@ -1,6 +1,6 @@
-# dit4c/dockerfile-dit4c-container-latex
+# dit4c/dit4c-container-texstudio
 
-[![](https://badge.imagelayers.io/dit4c/dit4c-container-latex:latest.svg)](https://imagelayers.io/?images=dit4c/dit4c-container-latex:latest)
+[![](https://badge.imagelayers.io/dit4c/dit4c-container-texstudio:latest.svg)](https://imagelayers.io/?images=dit4c/dit4c-container-texstudio:latest)
 
 Current installation has TexStudio 2.10.4 installed as well as texlive-*
 
