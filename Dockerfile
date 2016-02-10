@@ -17,8 +17,8 @@ RUN yum install -y \
     texlive-thailatex \
     texlive-thailatex-doc
 
-RUN yum localinstall -y \
-    "http://download.opensuse.org/repositories/home:/jsundermeyer/CentOS_CentOS-7/x86_64/texstudio-2.10.6-8.1.x86_64.rpm"
+RUN curl -s "http://download.opensuse.org/repositories/home:/jsundermeyer/CentOS_CentOS-7/home:jsundermeyer.repo" > /etc/yum.repos.d/texstudio.repo && \
+  yum install -y texstudio
 
 RUN cd /tmp/ && \
     curl -L -s -o texstudio.desktop "http://sourceforge.net/p/texstudio/hg/ci/default/tree/utilities/texstudio.desktop?format=raw" && \
